@@ -1,2 +1,3 @@
+# 下記のファイルをgit addで追跡不要に設定:20250525_2357ok
 docker/mysql/data/*
 !.gitkeep
