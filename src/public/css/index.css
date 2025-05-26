@@ -1,0 +1,157 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 20px 10px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8B7969;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #8B7969;
+}
+
+.form__label--required {
+    color: #FF9F9F;
+}
+
+.form__error {
+    color: #FF9F9F;
+}
+
+.form__group-title {
+    width: 20%;
+    text-align: left;
+}
+
+.form__group-content {
+    width: 70%;
+    text-align: left;
+}
+
+.form__input--name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input--last_name,
+.form__input--first_name {
+    width: 45%;
+}
+
+/* inputの大きさを揃えたい */
+.form__input--last_name input,
+.form__input--first_name input {
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    padding: 7px 15px;
+    border: none;
+    width: 100%;
+}
+
+.form__input--radio {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.form__input--radio label {
+    padding-right: 30px;
+}
+
+.form__input--radio input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.form__input--radio input[type="radio"]::before {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.form__input--radio input[type="radio"]:checked::before {
+    background-color: #8B7969;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    padding: 7px 15px;
+    border: none;
+    width: 100%;
+}
+
+.form__input--textarea textarea {
+    /* サイズの拡大縮小なし */
+    resize: none;
+    height: 130px;
+}
+
+.form__input--tel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__input--tel input {
+    display: inline-block;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    padding: 7px 15px;
+    border: none;
+    text-align: center;
+    width: 30%;
+}
+
+/* selectボックスがフォームに対して半分になるようにしたい */
+.form__input--category {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.form__input--category select {
+    appearance: none;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    padding: 7px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.form__input--category::after {
+    position: relative;
+    right: 15px;
+    width: 10px;
+    height: 7px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: "";
+    background-color: #8B7969;
+    pointer-events: none;
+}

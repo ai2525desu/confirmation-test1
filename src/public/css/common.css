@@ -1,0 +1,30 @@
+.header {
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header__inner {
+    max-width: 1230px;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header__logo {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #8B7969;
+    text-decoration: none;
+}
+
+/* 追加したが、いまいちうまくいかないのでいったんコメントアウト管理画面などは別でレイアウト作ったほうがいいか？
+.header__button {
+    width: 100px;
+    height: 34px;
+    margin: 33px 1316px auto;
+    border: 1px solid #D9C6B5;
+    background-color: #FAFAFA;
+    color: #D9C6B5;
+} */
