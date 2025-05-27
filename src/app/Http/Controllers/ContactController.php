@@ -17,4 +17,10 @@ class ContactController extends Controller
     {
         return view('confirm');
     }
+
+    // サンクスページのアクション
+    public function thanks()
+    {
+        return view('thanks');
+    }
 }

@@ -18,3 +18,6 @@ Route::get('/', [ContactController::class, 'index']);
 
 // 確認画面
 Route::get('/confirm', [ContactController::class, 'confirm']);
+
+// サンクス画面の表示
+Route::get('/thanks', [ContactController::class, 'thanks']);

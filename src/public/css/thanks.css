@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-text {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* 20250526:試行錯誤したが画面幅からはみ出してしまうが解決策がわからないためいったん次へ */
+    font-size: 280px;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8B7969;
+    opacity: 0.05;
+}
+
+.front-content {
+    position: relative;
+    z-index: 1;
+}
+
+.front-content__text {
+    font-weight: 700;
+    font-size: 30px;
+    color: #8B7969;
+}
+
+.front-content__button {
+    appearance: none;
+    padding: 10px 40px;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    background-color: #82756A;
+    color: #fff;
+}
