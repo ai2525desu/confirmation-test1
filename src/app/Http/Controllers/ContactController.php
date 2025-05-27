@@ -13,9 +13,11 @@ class ContactController extends Controller
     }
 
     // 確認画面のアクション
-    public function confirm()
+    public function confirm(Request $request)
     {
-        return view('confirm');
+        // リレーションしてcategory_id反映させないといけない。categoryの部分エラーが出ると思う
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1','tel2', 'tel3','address', 'building', 'category', 'content']);
+        return view('confirm', compact('contact'));
     }
 
     // サンクスページのアクション

@@ -18,7 +18,7 @@ foreach ($categories as $category) {
     <h2 class="contact-form__heading">
         Contact
     </h2>
-    <form class="form" action="" method="">
+    <form class="form" action="/confirm" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">
