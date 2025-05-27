@@ -13,4 +13,8 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+// 入力フォーム
 Route::get('/', [ContactController::class, 'index']);
+
+// 確認画面
+Route::get('/confirm', [ContactController::class, 'confirm']);

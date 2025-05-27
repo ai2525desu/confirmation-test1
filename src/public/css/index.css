@@ -78,6 +78,7 @@
 
 .form__input--radio label {
     padding-right: 30px;
+    font-size: 18px;
 }
 
 .form__input--radio input[type="radio"] {
@@ -172,7 +173,7 @@
 .form__button--submit {
     appearance: none;
     border: none;
-    padding: 8px 25px;
+    padding: 10px 40px;
     color: #fff;
     background-color: #82756A;
     font-size: 20px;
