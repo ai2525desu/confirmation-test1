@@ -1,0 +1,89 @@
+.move__register-screen {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #D9C6B5;
+}
+
+.login-form__content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+
+.login-form__heading {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    text-align: center;
+    color: #8B7969;
+}
+
+.login-form__form {
+    width: 60%;
+    height: 60%;
+    background-color: #FFFFFF;
+    border: 1px solid #C5B9B0;
+    border-radius: 7px;
+    margin: 0 auto 30px;
+
+}
+
+
+.login-form__group-wrap {
+    margin: 30px auto;
+    width: 70%;
+}
+
+.login-form__group-part {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.login-form__group-part:last-child {
+    margin-bottom: 0;
+}
+
+.login-form__group-title {
+    margin-bottom: 5px;
+}
+
+.login-form__label--item {
+    color: #8B7969;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.login-form__group-content input {
+    width: 100%;
+    height: 55px;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    font-size: 14px;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+
+
+.login-form__button {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form__button--submit {
+    appearance: none;
+    border: none;
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #82756A;
+    font-size: 20px;
+    cursor: pointer;
+}

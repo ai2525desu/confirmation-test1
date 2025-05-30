@@ -7,7 +7,7 @@
 
 <!-- ＠section('button', 'regster')にしたら自動的に文字が入るのではと予想したが、一応下記のままでやってみる -->
 @section('button')
-<a class="move__register-screen" href="/login">login</a>
+<a class="move__login-screen" href="/login">login</a>
 @endsection
 
 @section('content')
@@ -15,7 +15,8 @@
     <h2 class="register-form__heading">
         Register
     </h2>
-    <form class="register-form__form">
+    <!-- action method後で記述 -->
+    <form class="register-form__form" action="/register" method="post">
         @csrf
         <div class="register-form__group-wrap">
             <div class="register-form__group-part">

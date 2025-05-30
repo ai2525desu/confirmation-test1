@@ -1,4 +1,4 @@
-@extends('layouts.admin-layout')
+@extends('layouts.users-layout')
 
 
 @section('css')
@@ -12,8 +12,45 @@
 
 @section('content')
 <div class="login-form__content">
-    <div class="login-form__heading">
-        <h2>Login</h2>
-    </div>
+    <h2 class="login-form__heading">
+        Login
+    </h2>
+    <form class="login-form__form" action="/login" method="post">
+        @csrf
+        <div class="login-form__group-wrap">
+            <div class="login-form__group-part">
+            <div class="login-form__group-part">
+                <div class="login-form__group-title">
+                    <span class="login-form__label--item">メールアドレス</span>
+                </div>
+                <div class="login-form__group-content">
+                    <input type="email" name="email" placeholder="例: test@example.com">
+                </div>
+                <div class="login-form__group-error">
+                    @error('email')
+                    {{ $message }}
+                    @enderror
+                </div>
+            </div>
+            <div class="login-form__group-part">
+                <div class="login-form__group-title">
+                    <span class="login-form__label--item">パスワード</span>
+                </div>
+                <div class="login-form__group-content">
+                    <input type="passwprd" name="password" placeholder="例: coachtech1106">
+                </div>
+                <div class="login-form__group-error">
+                    @error('password')
+                    {{ $message }}
+                    @enderror
+                </div>
+            </div>
+        </div>
+        <div class="login-form__button">
+            <button class="login-form__button--submit">
+                ログイン
+            </button>
+        </div>
+    </form>
 </div>
 @endsection
