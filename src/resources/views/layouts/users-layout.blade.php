@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/admin-layout.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/users-layout.css') }}" />
     @yield('css')
 </head>
 
@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         @yield('content')
     </main>
 </body>

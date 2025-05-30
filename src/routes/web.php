@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +22,10 @@ Route::post('/confirm', [ContactController::class, 'confirm']);
 
 // サンクス画面の表示
 Route::post('/thanks', [ContactController::class, 'thanks']);
+
+//  ここから管理に関連するルーティング
+// 登録画面
+Route::get('/register', [AuthController::class, 'register']);
+
+// ログイン画面
+Route::get('/login', [AuthController::class, 'login']);

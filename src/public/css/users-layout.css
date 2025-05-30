@@ -1,11 +1,12 @@
 .header {
     border-bottom: 1px solid #E0DFDE;
+    height: 100px;
+    position: relative;
 }
 
 .header__inner {
     max-width: 1230px;
-    height: 100px;
-    width: 100%;
+    height: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -20,12 +21,19 @@
     text-decoration: none;
 }
 
-/* 追加したが、いまいちうまくいかないのでいったんコメントアウト管理画面などは別でレイアウト作ったほうがいいか？
 .header__button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-25%);
     width: 100px;
-    height: 34px;
-    margin: 33px 1316px auto;
+    padding: 5px;
     border: 1px solid #D9C6B5;
     background-color: #FAFAFA;
     color: #D9C6B5;
-} */
+    text-align: center;
+}
+
+.main {
+    background-color: #F1ECE7;
+}
