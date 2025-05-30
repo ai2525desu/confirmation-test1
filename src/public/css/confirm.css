@@ -60,21 +60,26 @@
     margin-top: 30px;
 }
 
-.confirm-form__button-submit {
+.confirm-form__button--submit {
     appearance: none;
     border: none;
     outline: none;
     padding: 10px 40px;
-}
-
-.confirm-form__button--send {
     background-color: #82756A;
     color: #fff;
+    cursor: pointer;
 }
 
+
 .confirm-form__button--fix {
+    appearance: none;
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 40px;
     background-color: transparent;
     color: #8B7969;
     text-decoration: underline;
     text-underline-offset: 2px;
+    cursor: pointer;
 }

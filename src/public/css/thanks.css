@@ -14,8 +14,8 @@ body {
     font-family: "Inika", serif;
     font-weight: 400;
     font-style: normal;
-    /* 20250526:試行錯誤したが画面幅からはみ出してしまうが解決策がわからないためいったん次へ */
-    font-size: 280px;
+    /* 20250528:試行錯誤したが画面幅からはみ出してしまうが解決策がわからないためいったん16vwで本来のFigma280pxと異なるが次へ */
+    font-size: 16vw;
     white-space: nowrap;
     position: absolute;
     top: 50%;

@@ -3,26 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Models\Contact;
+use App\Models\Category;
 
 class ContactController extends Controller
 {
     // お問い合わせ入力フォームのアクション
-    public function index()
+    // public function index()
+    // {
+    //     $contact = new Contact();
+    //     $categories = Category::all();
+    //     return view('index', compact('contact','categories'));
+    // }
+    // 修正で
+    public function index(Request $request)
     {
-        return view('index');
+        $contact = new Contact($request->all());
+        $categories = Category::all();
+        return view('index', compact('contact','categories'));
     }
-
     // 確認画面のアクション
-    public function confirm(Request $request)
+    // エラーで値の送信ができていない。ダミーデータはOK。電話番号が三分割にしてあることが問題か？
+    public function confirm(ContactRequest $request)
     {
-        // リレーションしてcategory_id反映させないといけない。categoryの部分エラーが出ると思う
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1','tel2', 'tel3','address', 'building', 'category', 'content']);
+        // Contactモデルのcateogryメソッド取得
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail']);
+        $category = Category::find($contact['category_id']);
+        $contact['category_content'] = $category ? $category->content : 'なし';
         return view('confirm', compact('contact'));
     }
 
+
     // サンクスページのアクション
-    public function thanks()
+    public function thanks(Request $request)
     {
-        return view('thanks');
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1','tel2', 'tel3',  'address', 'building', 'category_content','category_id', 'detail']);
+        return view('thanks', compact('contact'));
     }
+
 }

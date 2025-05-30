@@ -17,7 +17,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', [ContactController::class, 'index']);
 
 // 確認画面
-Route::get('/confirm', [ContactController::class, 'confirm']);
+Route::post('/confirm', [ContactController::class, 'confirm']);
 
 // サンクス画面の表示
-Route::get('/thanks', [ContactController::class, 'thanks']);
+Route::post('/thanks', [ContactController::class, 'thanks']);

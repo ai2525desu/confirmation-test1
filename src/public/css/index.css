@@ -44,6 +44,12 @@
     color: #FF9F9F;
 }
 
+.form__error--name {
+    color: #FF9F9F;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .form__group-content {
     width: 60%;
@@ -70,10 +76,16 @@
     width: 100%;
 }
 
+
 .form__input--radio {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
+}
+
+.form__error--radio {
+    color: #FF9F9F;
 }
 
 .form__input--radio label {
@@ -119,6 +131,7 @@
     /* サイズの拡大縮小なし */
     resize: none;
     height: 130px;
+    outline: none;
 }
 
 .form__input--tel {
@@ -140,8 +153,8 @@
 .form__input--category {
     display: flex;
     align-items: center;
-    position: absolute;
-    width: 50%;
+    position: relative;
+    width: 100%;
 }
 
 .form__input--category select {
