@@ -24,7 +24,7 @@
                     <span class="login-form__label--item">メールアドレス</span>
                 </div>
                 <div class="login-form__group-content">
-                    <input type="email" name="email" placeholder="例: test@example.com">
+                    <input type="email" name="email" placeholder="例: test@example.com" value="{{ old('email') }}">
                 </div>
                 <div class="login-form__group-error">
                     @error('email')
@@ -37,7 +37,7 @@
                     <span class="login-form__label--item">パスワード</span>
                 </div>
                 <div class="login-form__group-content">
-                    <input type="passwprd" name="password" placeholder="例: coachtech1106">
+                    <input type="password" name="password" placeholder="例: coachtech1106">
                 </div>
                 <div class="login-form__group-error">
                     @error('password')

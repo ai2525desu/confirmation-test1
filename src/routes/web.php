@@ -23,9 +23,12 @@ Route::post('/confirm', [ContactController::class, 'confirm']);
 // サンクス画面の表示
 Route::post('/thanks', [ContactController::class, 'thanks']);
 
-//  ここから管理に関連するルーティング
+//  ここからログイン認証に関連するルーティング
 // 登録画面
 Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'store']);
 
 // ログイン画面
 Route::get('/login', [AuthController::class, 'login']);
+
+
