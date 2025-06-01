@@ -61,13 +61,6 @@ foreach ($categories as $category) {
                     <input type="radio" name="gender" value="1" {{ old('gender', $contact->gender ?? '') == '1' ? 'checked' : '' }} checked><label>男性</label>
                     <input type="radio" name="gender" value="2" {{ old('gender', $contact->gender ?? '') == '2' ? 'checked' : '' }}><label>女性</label>
                     <input type="radio" name="gender" value="3" {{ old('gender', $contact->gender ?? '') == '3' ? 'checked' : '' }}><label>その他</label>
-                    <!-- @php
-                        $selectedGender = old('gender', $contact->gender ?? '1');
-                    @endphp 
-                    <p>selectedGender : {{$selectedGender}}<p>
-                    <input type="radio" name="gender" value="1" {{ $selectedGender == '1' ? 'checked' : '' }}><label>男性</label>
-                    <input type="radio" name="gender" value="2" {{ $selectedGender == '2' ? 'checked' : '' }}><label>女性</label>
-                    <input type="radio" name="gender" value="3" {{ $selectedGender == '3' ? 'checked' : '' }}><label>その他</label> -->
                 </div>
                 <div class="form__error--radio">
                     @error('gender')

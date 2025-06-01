@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +31,16 @@ Route::post('/register', [AuthController::class, 'store']);
 
 // ログイン画面
 Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'authenticate']);
+
+// 管理画面：ログイン後にしか表示されないように設定
+// いったん画面上の確認したいのでミドルウェアを切っておく
+// Route::middleware('auth')->group(function () {
+    Route::get('/admin', [AdminController::class, 'admin']);
+// });
+
+// ログアウト
+Route::post('/logout', [AdminController::class, 'destroy'])->name('logout');
+
 
 

@@ -32,6 +32,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
+    // ログインのためのアクション:post
     public function authenticate(LoginRequest $request)
     {
         $user = $request->only('email', 'password');
@@ -46,5 +47,15 @@ class AuthController extends Controller
             ]);
             // withEroors()メソッドでエラーメッセージの表示もできる。
         }
+    }
+
+    // ログアウトのためのアクション
+    public function destroy(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('login');
     }
 }

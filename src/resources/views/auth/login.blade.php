@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
 @endsection
 
-<!-- ＠section('button', 'regster')にしたら自動的に文字が入るのではと予想したが、一応下記のままでやってみる -->
 @section('button')
 <a class="move__register-screen" href="/register">register</a>
 @endsection
