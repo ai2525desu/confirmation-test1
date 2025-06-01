@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
+use App\Models\Contact;
+use App\Models\Category;
 
 class AuthController extends Controller
 {
@@ -49,13 +52,4 @@ class AuthController extends Controller
         }
     }
 
-    // ログアウトのためのアクション
-    public function destroy(Request $request)
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return redirect('login');
-    }
 }

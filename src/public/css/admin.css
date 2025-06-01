@@ -8,3 +8,134 @@
     color: #D9C6B5;
     background-color: #FAFAFA;
 }
+
+.admin-screen__content {
+    margin: 0 auto;
+    padding: 20px 10px;
+    max-width: 1230px;
+    width: 80%;
+}
+
+.admin-screen__heading {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    color: #8B7969;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* これが必要か判断しづらいのでひとまず残しておく */
+.admin-screen__search--row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.admin-screen__search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-form__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.search-form__item input,
+.search-form__item select {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.search-form__item-input--keyword {
+    width: 40%;
+}
+
+.search-form__button {
+    width: 10%;
+}
+
+.search-form__button--submit {
+    appearance: none;
+    color: #fff;
+    height: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.search-form__button--search {
+    outline: none;
+    border: 1px solid #8B7969;
+    background: #8B7969;
+}
+
+.search-form__button--reset {
+    display: inline-block;
+    border: 1px solid #D9C6B5;
+    background: #D9C6B5;
+    text-decoration: none;
+}
+
+.admin-screen__data-table {
+    width: 100%;
+    border: 1px solid #E0DFDE;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.search-form__export button {
+    padding: 8px 20px;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: #E1DBD699;
+    opacity: 0.6;
+    color: #8B7969;
+}
+
+.data-table__row--header,
+.data-table__row--item {
+    height: 50px;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+th,
+td {
+    padding: 10px 20px;
+    flex-wrap: nowrap;
+}
+
+
+.data-table__row--header {
+    background-color: #8B7969;
+}
+
+.data-table__heading {
+    font-weight: normal;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.data-table__content {
+    font-size: 20px;
+}
+
+.data-table__row:last-child {
+    border-bottom: none;
+}
+
+.modal-button {
+    appearance: none;
+    outline: none;
+    padding: 8px 20px;
+    border: 1px solid #D9C6B599;
+    background-color: #F4F4F44D;
+    opacity: 0.7;
+    font-size: 18px;
+    color: #D9C6B5;
+}

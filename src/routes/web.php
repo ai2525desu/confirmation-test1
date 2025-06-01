@@ -37,6 +37,7 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 // いったん画面上の確認したいのでミドルウェアを切っておく
 // Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'admin']);
+    Route::get('/admin/search', [AdminController::class, 'search']);
 // });
 
 // ログアウト
