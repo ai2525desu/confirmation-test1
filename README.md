@@ -31,9 +31,9 @@
 ![ER図](contact-form.png)
 
 ## URL
-​- phpMyadmin：http://localhost:8080/
-- お問い合わせ入力フォーム：http://localhost/
-- ユーザー登録画面：http://localhost/register
-- ログイン画面：http://localhost/login
+​*phpMyadmin：http://localhost:8080/
+*お問い合わせ入力フォーム：http://localhost/
+*ユーザー登録画面：http://localhost/register
+*ログイン画面：http://localhost/login
 
 
