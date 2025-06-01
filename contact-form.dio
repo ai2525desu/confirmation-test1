@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pZ3RUui6c9BL2p6Ok934" name="ページのやり取り">
-        <mxGraphModel dx="668" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="45" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -130,20 +130,20 @@
                 <mxCell id="Bhb3oKkmXBbIC3TGG0SJ-12" value="登録画面で登録されるユーザー情報" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="Bhb3oKkmXBbIC3TGG0SJ-11" vertex="1">
                     <mxGeometry x="10" y="30" width="220" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="使用者：一般ユーザー" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="2" value="使用者：一般ユーザー" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="30" y="50" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="使用者：管理ユーザー" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="3" value="使用者：管理ユーザー" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="330" y="50" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="qXYAK6YfIwJxjew6yI2e-3" value="特にユーザーの登録は必要なし" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;size=35;position=0.17;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+                <mxCell id="qXYAK6YfIwJxjew6yI2e-3" value="特にユーザーの登録は必要なし" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;size=35;position=0.17;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
                     <mxGeometry x="200" y="250" width="130" height="95" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="YnqBjWU3U_983JnPuy8I" name="ER図">
-        <mxGraphModel dx="-121" dy="1474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="759" dy="2167" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

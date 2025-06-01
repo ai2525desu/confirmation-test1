@@ -28,7 +28,7 @@
 - mysql:8.0.26
 
 ## ER図
-![alt text](image.png)
+![ER図](/contact-form.png)
 
 ## URL
 ​- phpMyadmin：http://localhost:8080/
