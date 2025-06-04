@@ -13,7 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(ContactsTableSeeder::class);
+        // 書いてる順番でシーダーの実行順が変わるので、これでcategory_idがないというエラーが解消される。
+        // $this->call(ContactsTableSeeder::class);
+        // $this->call(CategoriesTableSeeder::class);
+        // エラー解消後
         $this->call(CategoriesTableSeeder::class);
+        $this->call(ContactsTableSeeder::class);
     }
 }
