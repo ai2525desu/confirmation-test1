@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/admin-layout.css') }}" />
+    @livewireStyles
     @yield('css')
 </head>
 
@@ -27,6 +28,7 @@
 
     <main>
         @yield('content')
+        @livewireScripts
     </main>
 </body>
 

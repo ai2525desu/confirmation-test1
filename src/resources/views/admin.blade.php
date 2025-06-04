@@ -111,8 +111,9 @@
                 {{ $contact['category_id'] ? $contact->category->content : 'なし' }}
             </td>
             <td class="data-table__content">
-                <button type="button" class="modal-button">詳細</button>
-                <!-- 検索したサイトの情報を元に記述したがブラウザ上に出てこないので、コメントアウト
+                <button wire:click="openModal()" type="button" class="modal-button">詳細</button>
+                <!-- モーダルうまく機能しないので、メモで残す。再度後で挑戦
+                @if($showModal)
                 <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
                     <form role="form" class="form-inline" method="post" action="">
                         @csrf
@@ -120,7 +121,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">お問い合わせ詳細</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+                                    <button wire:click="closeModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる">x</button>
                                 </div>
                                 <div class="modal-body">
                                     <p><strong>お名前</strong><span id="modal-name"></span></p>
@@ -138,7 +139,8 @@
                             </div>
                         </div>
                     </form>
-                </div> -->
+                </div>
+                @endif -->
             </td>
         </tr>
         @endforeach
