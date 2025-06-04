@@ -177,6 +177,4 @@ foreach ($categories as $category) {
         </div>
     </form>
 </div>
-
-
 @endsection

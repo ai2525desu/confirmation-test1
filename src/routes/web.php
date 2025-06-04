@@ -35,10 +35,10 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 
 // 管理画面：ログイン後にしか表示されないように設定
 // いったん画面上の確認したいのでミドルウェアを切っておく
-// Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'admin']);
     Route::get('/admin/search', [AdminController::class, 'search']);
-// });
+});
 
 // ログアウト
 Route::post('/logout', [AdminController::class, 'destroy'])->name('logout');
