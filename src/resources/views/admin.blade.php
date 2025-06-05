@@ -113,7 +113,7 @@
             <td class="data-table__content">
                 <button wire:click="openModal()" type="button" class="modal-button">詳細</button>
                 <!-- モーダルうまく機能しないので、メモで残す。再度後で挑戦
-                @if($showModal)
+                ＠if($showModal)
                 <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
                     <form role="form" class="form-inline" method="post" action="">
                         @csrf
@@ -140,7 +140,7 @@
                         </div>
                     </form>
                 </div>
-                @endif -->
+                ＠endif -->
             </td>
         </tr>
         @endforeach

@@ -50,6 +50,11 @@
     font-size: 20px;
 }
 
+.confirm-table__text--gender {
+    color: #8B7969;
+    font-size: 20px;
+}
+
 .confirm-table__row:last-child .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {
     border-bottom-width: 0;

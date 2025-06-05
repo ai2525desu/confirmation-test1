@@ -42,6 +42,3 @@ Route::middleware('auth')->group(function () {
 
 // ログアウト
 Route::post('/logout', [AdminController::class, 'destroy'])->name('logout');
-
-
-

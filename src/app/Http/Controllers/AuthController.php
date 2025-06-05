@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
@@ -24,9 +25,9 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password
+            'password' => Hash::make($request->password)
         ]);
-        return view('/login', compact('user'));
+        return view('auth.login', compact('user'));
     }
 
     // ログイン画面の表示:get
@@ -41,7 +42,7 @@ class AuthController extends Controller
         $user = $request->only('email', 'password');
 
         if (Auth::attempt($user)) {
-            $request->session()->regenerate;
+            $request->session()->regenerate();
             // intended('/admin')で指定したページにリダイレクトされる
             return redirect()->intended('/admin');
         } else {
