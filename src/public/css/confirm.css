@@ -50,6 +50,7 @@
     font-size: 20px;
 }
 
+.confirm-table__text--name,
 .confirm-table__text--gender {
     color: #8B7969;
     font-size: 20px;

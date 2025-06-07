@@ -24,6 +24,11 @@ class ContactController extends Controller
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail']);
         $category = Category::find($contact['category_id']);
         $contact['category_content'] = $category ? $category->content : 'なし';
+
+        if($request->input('back') == 'back') {
+            return redirect()->route('index')->withInput();
+        }
+
         return view('confirm', compact('contact'));
     }
 

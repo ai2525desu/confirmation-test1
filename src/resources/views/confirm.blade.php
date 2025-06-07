@@ -17,7 +17,12 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
-                        <input type="text" name="fullname" value="{{ $contact['last_name'] }}{{ $contact['first_name'] }}" readonly>
+                        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
+                        <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
+                        <!-- もともとfullnameという名前で出力していたが、このままでは修正時の妨げになるとのこと
+                        <input type="text" name="fullname" value="{{ $contact['last_name'] }}{{ $contact['first_name'] }}" readonly> -->
+                        <!-- 下記にinputをhiddenにしたので、姓名を表示指せるように追記 -->
+                        <span class="confirm-table__text--name"> {{$contact['last_name']}} {{$contact['first_name']}}</span>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -78,13 +83,15 @@
             </table>
         </div>
         <div class="confirm-form__button">
-            <button class="confirm-form__button--submit">
+            <button class="confirm-form__button--submit" name="submit" value="submit">
                 送信
             </button>
             <!-- 5/30お問い合わせフォームに戻ることはできるが、修正内容の値が保持されていない問題発生中 -->
-            <a class="confirm-form__button--fix" href="/">
-                修正
-            </a>
+            <form action="/confirm" method="post">
+                <button class="confirm-form__button--fix" name="back" value="back">
+                    修正
+                </button>
+            </form>
         </div>
     </form>
 </div>

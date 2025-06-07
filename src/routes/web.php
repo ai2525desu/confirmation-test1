@@ -16,7 +16,7 @@ use App\Http\Controllers\AdminController;
 */
 
 // 入力フォーム
-Route::get('/', [ContactController::class, 'index']);
+Route::get('/', [ContactController::class, 'index'])->name('index');
 
 // 確認画面
 Route::post('/confirm', [ContactController::class, 'confirm']);
