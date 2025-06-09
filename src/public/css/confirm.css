@@ -40,18 +40,14 @@
 .confirm-table__text {
     padding: 20px;
     border: 1px solid #E0DFDE;
+    color: #8B7969;
+    font-size: 20px;
 }
 
 .confirm-table__text input {
     width: 100%;
     outline: none;
     border: none;
-    color: #8B7969;
-    font-size: 20px;
-}
-
-.confirm-table__text--name,
-.confirm-table__text--gender {
     color: #8B7969;
     font-size: 20px;
 }
@@ -66,7 +62,7 @@
     margin-top: 30px;
 }
 
-.confirm-form__button--submit {
+.confirm-form__button--send {
     appearance: none;
     border: none;
     outline: none;
@@ -77,11 +73,10 @@
 }
 
 
-.confirm-form__button--fix {
+.confirm-form__button--back {
     appearance: none;
     border: none;
     outline: none;
-    display: inline-block;
     padding: 10px 40px;
     background-color: transparent;
     color: #8B7969;

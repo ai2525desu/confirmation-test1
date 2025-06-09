@@ -19,13 +19,3 @@
     color: #8B7969;
     text-decoration: none;
 }
-
-/* 追加したが、いまいちうまくいかないのでいったんコメントアウト管理画面などは別でレイアウト作ったほうがいいか？=>admin-layoutで作成中
-.header__button {
-    width: 100px;
-    height: 34px;
-    margin: 33px 1316px auto;
-    border: 1px solid #D9C6B5;
-    background-color: #FAFAFA;
-    color: #D9C6B5;
-} */

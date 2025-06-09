@@ -18,25 +18,64 @@ class ContactController extends Controller
     }
 
     // 確認画面のアクション
-    // エラーで値の送信ができていない。ダミーデータはOK。電話番号が三分割にしてあることが問題か？
     public function confirm(ContactRequest $request)
     {
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'category_id', 'detail']);
         $category = Category::find($contact['category_id']);
         $contact['category_content'] = $category ? $category->content : 'なし';
 
-        if($request->input('back') == 'back') {
-            return redirect()->route('index')->withInput();
-        }
+        // 確認画面のコントローラー内に修正を行う際のデータの送信記述をしていたが、このアクションはthanks画面に遷移する際に必要なアクションだった。
+        // if($request->input('back') == 'back') {
+        //     return redirect()->route('index')->withInput();
+        // }
 
         return view('confirm', compact('contact'));
     }
 
-    // サンクスページのアクション
-    public function thanks(Request $request)
+    // 自分で考えたサンクスページのアクション：
+    // public function thanks(Request $request)
+    // {
+    //     $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1','tel2', 'tel3',  'address', 'building', 'category_content','category_id', 'detail']);
+    //     return view('thanks', compact('contact'));
+    // }
+
+    // 解答例：送信ボタンでの挙動と修正ボタンでの挙動の内容を条件分岐
+    public function thanks(ContactRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1','tel2', 'tel3',  'address', 'building', 'category_content','category_id', 'detail']);
-        return view('thanks', compact('contact'));
+        if ($request->has('back')) {
+            return redirect('/')->withInput();
+        } else {
+            $request['tel'] = $request->tel1 . $request->tel2 . $request->tel3;
+            $value = $request->only([
+                'category_id',
+                'first_name',
+                'last_name',
+                'gender',
+                'email',
+                'tel',
+                'address',
+                'building',
+                // 'category_content',
+                'detail'
+            ]);
+            $value['category_id'] = 1;
+            Contact::create(
+                // $request->only([
+                //     'category_id',
+                //     'first_name',
+                //     'last_name',
+                //     'gender',
+                //     'email',
+                //     'tel',
+                //     'address',
+                //     'building',
+                //     // 'category_content',
+                //     'detail'
+                // ])
+                $value
+            );
+        }
     }
+
 
 }
