@@ -11,6 +11,7 @@ class Contact extends Model
 
     // 書き換えOKの設定
     protected $fillable = [
+        'category_id',
         'first_name',
         'last_name',
         'gender',
