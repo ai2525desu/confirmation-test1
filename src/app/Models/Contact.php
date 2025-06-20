@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Contact extends Model
 {
@@ -25,7 +26,7 @@ class Contact extends Model
     // ファクトリでのダミーデータ作成
     public function run()
     {
-        Contact::factory()->conunt(35)->create();
+        Contact::factory()->count(35)->create();
     }
 
     // Categoryモデルとのリレーション
@@ -40,18 +41,21 @@ class Contact extends Model
     {
         if(!empty($keyword)) {
             $query->where(function ($q) use ($keyword) {
-                $q->where('first_name', 'like', "%{$keyword}%")
+                $q->where(DB::raw('CONCAT(last_name, first_name)'), 'like', "%{$keyword}%")
+                    ->orwhere('first_name', 'like', "%{$keyword}%")
                     ->orwhere('last_name', 'like', "%{$keyword}%")
                     ->orwhere('email', 'like', "%{$keyword}%");
             });
         }
+        return $query;
     }
     // 性別
     public function scopeGenderSearch($query, $gender)
     {
-        if(!empty($gender)) {
-            $query->where('gender', $gender);
+        if(!empty($gender) && $gender !== 'all') {
+            return $query->where('gender', $gender);
         }
+        return $query;
     }
     // 種類
     public function scopeCategorySearch($query, $category_id)
@@ -59,6 +63,7 @@ class Contact extends Model
         if(!empty($category_id)) {
             $query->where('category_id', $category_id);
         }
+        return $query;
     }
 
     // 日付
@@ -67,5 +72,6 @@ class Contact extends Model
         if(!empty($date)) {
             $query->whereData('created_at', $date);
         }
+        return $query;
     }
 }

@@ -15,8 +15,7 @@
     <h2 class="register-form__heading">
         Register
     </h2>
-    <!-- action method後で記述 -->
-    <form class="register-form__form" action="/register" method="post">
+    <form class="register-form__form" action="/register" method="post" novalidate>
         @csrf
         <div class="register-form__group-wrap">
             <div class="register-form__group-part">

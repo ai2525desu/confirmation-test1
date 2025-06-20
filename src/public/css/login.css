@@ -69,7 +69,9 @@
     border: none;
 }
 
-
+.login-form__group-error {
+    color: #FF9F9F;
+}
 
 .login-form__button {
     width: 60%;

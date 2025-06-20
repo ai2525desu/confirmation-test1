@@ -69,7 +69,9 @@
     border: none;
 }
 
-
+.register-form__group-error {
+    color: #FF9F9F;
+}
 
 .register-form__button {
     width: 60%;

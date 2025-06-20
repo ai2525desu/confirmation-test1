@@ -14,7 +14,7 @@
     <h2 class="login-form__heading">
         Login
     </h2>
-    <form class="login-form__form" action="/login" method="post">
+    <form class="login-form__form" action="/login" method="post" novalidate>
         @csrf
         <div class="login-form__group-wrap">
             <div class="login-form__group-part">

@@ -29,7 +29,7 @@ class LoginRequest extends FormRequest
         ];
     }
 
-    public function message()
+    public function messages()
     {
         return [
 
@@ -39,3 +39,4 @@ class LoginRequest extends FormRequest
         ];
     }
 }
+    

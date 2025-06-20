@@ -23,7 +23,7 @@ class AdminController extends Controller
     // 検索
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->date)->paginate(7);
+        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->date)->paginate(7)->appends($request->query());
         $categories = Category::all();
 
         return view('admin', compact('contacts', 'categories'));

@@ -28,8 +28,9 @@
                     <input class="search-form__item-input--keyword" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ request('keyword') }}">
                     <!-- 性別：セレクトボタンの▼未装飾装飾 -->
                     <select class="search-form__item-select" name="gender" >
-                        <option value="" {{request('gender') == 'null' ? 'selected' : '' }}>性別</option>
-                        <option value="" {{request('gender') == '' ? 'selected' : '' }}>すべて</option>
+                        <option value="" disabled selected {{request('gender') == 'null' ? 'selected' : '' }} >性別</option>
+                        <!-- <option value="" disabled selected>性別</option> -->
+                        <option value="all" {{request('gender') == 'all' ? 'selected' : '' }}>すべて</option>
                         <option value="1" {{request('gender') == '1' ? 'selected' : '' }}>男性</option>
                         <option value="2" {{request('gender') == '2' ? 'selected' : '' }}>女性</option>
                         <option value="3" {{request('gender') == '3' ? 'selected' : '' }}>その他</option>
