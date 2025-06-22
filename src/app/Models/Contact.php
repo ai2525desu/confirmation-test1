@@ -70,7 +70,7 @@ class Contact extends Model
     public function scopeDateSearch($query, $date)
     {
         if(!empty($date)) {
-            $query->whereData('created_at', $date);
+            $query->whereDate('created_at', $date);
         }
         return $query;
     }
