@@ -8,6 +8,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Contact;
 use App\Models\Category;
+use Illuminate\Support\Facades\Log;
 
 
 class AdminController extends Controller
@@ -29,14 +30,22 @@ class AdminController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
-        // ログアウトのためのアクション
-        public function destroy(Request $request)
-        {
-            Auth::logout();
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-    
-            return redirect('auth.login');
-        }
-}
+    // ログアウトのためのアクション
+    public function destroy(Request $request)
+    {
+        Log::debug('test');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
+        // return redirect('auth.login');
+        return redirect('/login');
+    }
+
+    // モーダルの削除機能
+    public function delete(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return ['success' => true];
+    }
+}
