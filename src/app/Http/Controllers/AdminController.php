@@ -46,6 +46,7 @@ class AdminController extends Controller
     public function delete(Request $request)
     {
         Contact::find($request->id)->delete();
+        // ここで、削除が成功したときの挙動がtrueになるようにreturnを返さないとエラーがブラウザ上で発生する
         return ['success' => true];
     }
 }

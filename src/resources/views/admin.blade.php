@@ -3,6 +3,7 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/pagination.css') }}" />
 @endsection
 
 @section('button')
@@ -150,7 +151,8 @@
                 {{ $contact['email'] }}
             </td>
             <td class="data-table__content">
-                {{ $contact['category_id'] ? $contact->category->content : 'なし' }}
+                <!-- {{ $contact['category_id'] ? $contact->category->content : 'なし' }} -->
+                {{ optional($contact->category)->content ?? 'なし' }}
             </td>
             <td class="data-table__content">
                 <!-- onclick="openModal({{ $contact['id'] }})"でforeachによって配列の繰り返しをしてるので、$contact['id']を引数で関数に渡し、開きたいモーダルの内容を取得してくれるようにする -->
@@ -197,7 +199,7 @@
                                     <p>
                                         <strong>お問い合わせの種類</strong>
                                         <!-- コントローラーで、Category:::all（）で取得している箇所からデータを持ってくる必要があるため、連想配列で$categoriesからキーと値の取得をしている -->
-                                        <span id="category">{{ $categories[$contact['category_id']]['content'] }}</span>
+                                        <span id="category">{{ optional($contact->category)->content ?? 'なし' }}</span>
                                     </p>
                                     <p><strong>お問い合わせの内容</strong><span id="modal-detail">{{ $contact['detail'] }}</span></p>
                                 </div>

@@ -1,0 +1,26 @@
+/* ページネーションの通常状態 */
+.page-item .page-link {
+    background-color: #FFFFFF;
+    border: 1px solid #E0DFDE;
+    color: #8B7969;
+}
+
+/* ホバー時の装飾 */
+.page-item .page-link:hover {
+    background-color: #FFFFFF;
+    color: #8B7969;
+}
+
+/* アクティブページ（現在表示しているページ） */
+.page-item.active .page-link {
+    background-color: #8B7969;
+    color: #FFFFFF;
+    border-color: #8B7969;
+}
+
+/* 非活性な前へ、次へのリンクの装飾 */
+.page-item .disabled .page-link {
+    background-color: #FFFFFF;
+    color: #8B7969;
+    border-color: #E0DFDE;
+}
