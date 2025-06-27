@@ -10,11 +10,15 @@ use App\Models\Category;
 class ContactController extends Controller
 {
     // お問い合わせ入力フォームのアクション
-        public function index()
+    public function index()
     {
-        $contact = new Contact();
+        // Contactモデルのインスタンス
+        // $contact = new Contact();
+        // // ここで、インスタンスで取得したものをデータに整える
+        // $contacts = $contact->all();
+        $contacts = Contact::all();
         $categories = Category::all();
-        return view('index', compact('contact','categories'));
+        return view('index', compact('contacts', 'categories'));
         // return view('index', compact('categories'));
     }
 
@@ -65,6 +69,4 @@ class ContactController extends Controller
         );
         return view('thanks');
     }
-
-
 }

@@ -49,4 +49,21 @@ class AdminController extends Controller
         // ここで、削除が成功したときの挙動がtrueになるようにreturnを返さないとエラーがブラウザ上で発生する
         return ['success' => true];
     }
+
+    // エクスポート
+    public function export(Request $request)
+    {
+        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->date)->get();
+
+        $csv = fopen('php://temp', 'w');
+        fputcsv($csv, ['ID', 'お名前', '性別', 'メールアドレス', 'お問い合わせの種類', 'お問い合わせの内容', '作成日時']);
+        foreach ($contacts as $contact) {
+            fputcsv($csv, [$contact->id, $contact->name, $contact->gender, $contact->email, $contact->category->content, $contact->content, $contact->created_at]);
+        }
+        fseek($csv, 0);
+        return response()->streamDownload(function () use ($csv) {
+            fpassthru($csv);
+            fclose($csv);
+        }, 'test.csv');
+    }
 }

@@ -38,6 +38,7 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'admin']);
     Route::get('/admin/search', [AdminController::class, 'search']);
+    Route::get('/admin/export', [AdminController::class, 'export']);
     Route::delete('/admin/delete/{id}', [AdminController::class, 'delete']);
 });
 

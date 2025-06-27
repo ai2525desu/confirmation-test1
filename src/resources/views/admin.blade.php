@@ -99,7 +99,10 @@
         <div class="admin-screen__search--row">
             <form class="search-form__export" action="/admin/export" method="post">
                 @csrf
-                <!-- 未記述：ボタンのレイアウトのみ行っておく -->
+                <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+                <input type="hidden" name="gender" value="{{ request('gender') }}">
+                <input type="hidden" name="category_id" value="{{ request('category_id') }}">
+                <input type="hidden" name="date" value="{{ request('date') }}">
                 <button type="submit">エクスポート</button>
             </form>
             <!-- レイアウトがBootstrapの標準の物、レイアウト変更必要 -->
